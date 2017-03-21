@@ -19,6 +19,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "styles/recordunion-app-theme.scss",
         "styles.scss"
       ],
       "scripts": [],

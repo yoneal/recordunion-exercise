@@ -1,6 +1,9 @@
 import { TestBed, async } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
+import {MdIconRegistry, MdDialogModule, MdList, MdButtonModule, MdListModule} from "@angular/material";
+import {NoteService} from "./note.service";
+import {By} from '@angular/platform-browser';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -8,6 +11,15 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      imports: [
+        MdDialogModule,
+        MdButtonModule,
+        MdListModule
+      ],
+      providers: [
+        MdIconRegistry,
+        NoteService
+      ]
     }).compileComponents();
   }));
 
@@ -17,16 +29,22 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   }));
 
-  it(`should have as title 'app works!'`, async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('app works!');
-  }));
+  // it(`should have an initial notes list`, async(() => {
+  //   const fixture = TestBed.createComponent(AppComponent);
+  //   const app = fixture.debugElement.componentInstance;
+  //   console.log(app);
+  //   expect(app.notes).toEqual([
+  //     'Note 1',
+  //     'Note 2'
+  //   ]);
+  // }));
 
-  it('should render title in a h1 tag', async(() => {
+  it('should have a list and a button', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
+    fixture.debugElement.componentInstance.ngOnInit();
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('app works!');
+    const element = fixture.debugElement;
+    expect(element.query(By.css('button'))).toBeTruthy();
+    expect(element.query(By.directive(MdList))).toBeTruthy();
   }));
 });
