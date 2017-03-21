@@ -1,0 +1,39 @@
+.mat-dialog-actions {
+  .mat-input-container {
+    flex: 1 1 auto;
+  }
+}
+
+//.cdk-focus-trap-content, .app-note-dialog {
+//  height: 100%;
+//  display: flex;
+//  flex-flow: column nowrap;
+//}
+
+:host {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+
+  .app-note-dialog {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
+
+:host {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+//.app-note-dialog {
+//  .mat-dialog-content {
+//    flex: 1 1 auto;
+//  }
+//}
+
+.mat-dialog-content {
+  flex: 1 1 auto;
+}

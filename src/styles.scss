@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+//@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
+
+.cdk-focus-trap-content {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.cdk-overlay-container {
+  z-index: 999;
+}

@@ -1,3 +1,5 @@
-<h1>
-  {{title}}
-</h1>
+<md-list>
+  <h3>Notes:</h3>
+  <md-list-item *ngFor="let note of notes">{{note}}</md-list-item>
+</md-list>
+<button class="support" md-fab (click)="toggleDialog()"><md-icon>question_answer</md-icon></button>

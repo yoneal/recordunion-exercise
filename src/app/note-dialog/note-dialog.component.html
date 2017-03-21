@@ -1,0 +1,12 @@
+<h1 md-dialog-title>Support Chat</h1>
+<div md-dialog-content>
+  <md-list>
+    <md-list-item *ngFor="let note of notes">{{note}}</md-list-item>
+  </md-list>
+</div>
+<div md-dialog-actions>
+  <md-input-container>
+    <input mdInput placeholder="Note 3" [(ngModel)]="inputNote">
+  </md-input-container>
+  <button md-icon-button (click)="send(inputNote)"><md-icon>send</md-icon></button>
+</div>
