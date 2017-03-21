@@ -5,8 +5,8 @@
   </md-list>
 </div>
 <div md-dialog-actions>
-  <md-input-container>
-    <input mdInput placeholder="Note 3" [(ngModel)]="inputNote">
+  <md-input-container floatPlaceholder="never">
+    <input mdInput placeholder="Note 3" [(ngModel)]="inputNote" tabindex="-1">
   </md-input-container>
   <button md-icon-button (click)="send(inputNote)"><md-icon>send</md-icon></button>
 </div>

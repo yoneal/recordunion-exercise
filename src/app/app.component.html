@@ -2,4 +2,7 @@
   <h3>Notes:</h3>
   <md-list-item *ngFor="let note of notes">{{note}}</md-list-item>
 </md-list>
-<button class="support" md-fab (click)="toggleDialog()"><md-icon>question_answer</md-icon></button>
+<button class="support" md-fab (click)="toggleDialog()">
+  <md-icon *ngIf="dialogRef == null">question_answer</md-icon>
+  <md-icon *ngIf="dialogRef != null">close</md-icon>
+</button>
