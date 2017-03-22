@@ -6,7 +6,12 @@ The same note will also appear in the list outside the dialog after 2 seconds.
 
 ## Run
 
-Install [Node.js](https://nodejs.org/en/).  
+Install [Node.js](https://nodejs.org/en/).
+Clone the project:
+```
+git clone recordunion-exercise
+cd recordunion-exercise
+```
 Run `npm install`.  
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
