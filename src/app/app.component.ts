@@ -33,11 +33,11 @@ export class AppComponent implements OnInit {
       return;
     }
     this.dialogRef = this.dialog.open(NoteDialogComponent, {
-      height: '50%',
-      width: '30%',
+      // height: '590px',
+      // width: '370px',
       position: {
-        bottom: '7%',
-        right: '7%'
+        bottom: '80px',
+        right: '20px'
       },
       disableClose: true
     });

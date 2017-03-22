@@ -4,10 +4,16 @@
 
 .cdk-focus-trap-content {
   height: 100%;
-  display: flex;
-  flex-flow: column nowrap;
+  //display: flex;
+  //flex-flow: column nowrap;
 }
 
 .cdk-overlay-container {
   z-index: 999;
+}
+
+.cdk-overlay-pane {
+  width: 370px;
+  height: 80%;
+  max-height: 590px;
 }

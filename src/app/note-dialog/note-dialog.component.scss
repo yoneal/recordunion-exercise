@@ -2,12 +2,7 @@
   height: 100%;
   display: flex;
   flex-flow: column nowrap;
-
-  .app-note-dialog {
-    height: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-  }
+  justify-content: space-between;
 }
 
 .mat-dialog-content {
