@@ -5,8 +5,11 @@
   </md-list>
 </div>
 <div md-dialog-actions>
-  <md-input-container floatPlaceholder="never">
-    <input mdInput placeholder="Note 3" [(ngModel)]="inputNote" tabindex="-1">
-  </md-input-container>
-  <button md-icon-button (click)="send(inputNote)"><md-icon>send</md-icon></button>
+  <form #myForm="ngForm">
+    <md-input-container floatPlaceholder="never">
+      <input mdInput name="note" placeholder="Note 3" [(ngModel)]="inputNote" tabindex="-1" [disabled]="processing" required>
+    </md-input-container>
+    <button md-icon-button (click)="send(inputNote)" [disabled]="!myForm.valid || processing"><md-icon>send</md-icon></button>
+
+  </form>
 </div>

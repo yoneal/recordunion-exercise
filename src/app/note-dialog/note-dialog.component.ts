@@ -11,6 +11,7 @@ export class NoteDialogComponent implements OnInit {
 
   notes: string[];
   inputNote: string;
+  processing: boolean;
 
   constructor(
     public dialogRef: MdDialogRef<NoteDialogComponent>,
@@ -23,11 +24,15 @@ export class NoteDialogComponent implements OnInit {
     this.noteService.get1SecNote().subscribe(
       (note: string) => {
         this.notes.push(note);
+        this.processing = false;
+        this.inputNote = '';
       }
     );
+    this.processing = false;
   }
 
   send(note: string) {
+    this.processing = true;
     this.noteService.sendNote(note);
   }
 }

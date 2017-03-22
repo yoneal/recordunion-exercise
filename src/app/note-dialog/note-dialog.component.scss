@@ -1,15 +1,3 @@
-.mat-dialog-actions {
-  .mat-input-container {
-    flex: 1 1 auto;
-  }
-}
-
-//.cdk-focus-trap-content, .app-note-dialog {
-//  height: 100%;
-//  display: flex;
-//  flex-flow: column nowrap;
-//}
-
 :host {
   height: 100%;
   display: flex;
@@ -22,22 +10,20 @@
   }
 }
 
-:host {
-  height: 100%;
-  display: flex;
-  flex-flow: column nowrap;
-}
-
-//.app-note-dialog {
-//  .mat-dialog-content {
-//    flex: 1 1 auto;
-//  }
-//}
-
 .mat-dialog-content {
   flex: 1 1 auto;
 }
 
 h1 {
   color: #f55;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex: 1 1 auto;
+
+  .mat-input-container {
+    flex: 1 1 auto;
+  }
 }
